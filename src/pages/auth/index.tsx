@@ -4,7 +4,7 @@ import { mutationLogin } from "./mutation";
 import { useNavigate } from "react-router-dom";
 
 export const Auth = () => {
-  const data = useMutation({
+  const  data  = useMutation({
     mutationKey: ["login"],
     mutationFn: mutationLogin,
   });
@@ -12,12 +12,12 @@ export const Auth = () => {
   const navigate = useNavigate();
 
   const handleLogin = async () => {
-      data.mutate();
-      console.log("DATA");
-      console.log(await data)
-        console.log('Mutation successful:', data);
-        localStorage.setItem('guest_session_id', data.guest_session_id);
-        navigate('/');
+       await data.mutate()
+      data.isPending ? ('Loading...') : (
+        data.isSuccess ? (
+            localStorage.setItem("guest_session_id", data?.data.guest_session_id),
+            navigate('/') ) : (
+            data.isError ? ('Error') : ('') ))
   };
 
   return (

@@ -13,7 +13,6 @@ export const rateMovie = async (movieId: number, rating: number) => {
            }
        );
    
-       console.log(await res.json());              //res.json() returns a promise, so we should use await when logging the response.
        return res.json();
    }; 
 
@@ -32,7 +31,5 @@ export const rateTvShow = async (tvShowId: number, rating: number) => {
         }
     );
 
-   
-       console.log(await res.json());              
-       return res.json();
+          return res.json();
    }; 

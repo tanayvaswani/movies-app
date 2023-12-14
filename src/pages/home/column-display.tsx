@@ -64,8 +64,7 @@ export const ColumnDisplay = (props: Props) => {
         <Grid.Column key={displayData.id}>
           <Card.Group>
             <Link
-              to={`/${displayType === DisplayType.Movies ? "movie" : "tvshow"}
-                           /${displayData.id}`}
+              to={`/${displayType === DisplayType.Movies ? "movie" : "tvshow"}/${displayData.id}`}
             >
               <Card
                 style={{ height: 820 }}

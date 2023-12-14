@@ -1,14 +1,11 @@
-import 'dotenv/config';
 
 export const fetchMovies = async () => {
-
-    const apiReadAccessToken = import.meta.env.VITE_API_READ_ACCESS_TOKEN;
 
     const res = await fetch(
         "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1",
         {
             headers: {
-                Authorization: `Bearer ${apiReadAccessToken}`
+                Authorization: `Bearer ${import.meta.env.VITE_API_READ_ACCESS_TOKEN}`
             },
         }
     );
@@ -18,13 +15,11 @@ export const fetchMovies = async () => {
 
 export const fetchTvShows = async () => {
 
-    const apiReadAccessToken = import.meta.env.VITE_API_READ_ACCESS_TOKEN;
-
     const res = await fetch(
         "https://api.themoviedb.org/3/tv/popular?language=en-US&page=1",
         {
             headers: {
-                Authorization: `Bearer ${apiReadAccessToken}`
+                Authorization: `Bearer ${import.meta.env.VITE_API_READ_ACCESS_TOKEN}`
             },
         }
     );
