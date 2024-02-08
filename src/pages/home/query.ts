@@ -3,7 +3,7 @@ export const fetchMovies = async () => {
     "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1",
     {
       headers: {
-        Authorization: `Bearer ${import.meta.env.SOME_TOKEN}`,
+        Authorization: `Bearer ${import.meta.env.VITE_MOVIE_ACCESS_TOKEN}`,
       },
     }
   );
@@ -16,7 +16,7 @@ export const fetchTvShows = async () => {
     "https://api.themoviedb.org/3/tv/popular?language=en-US&page=1",
     {
       headers: {
-        Authorization: `Bearer ${import.meta.env.SOME_TOKEN}`,
+        Authorization: `Bearer ${import.meta.env.VITE_MOVIE_ACCESS_TOKEN}`,
       },
     }
   );

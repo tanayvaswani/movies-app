@@ -2,7 +2,7 @@ export const rateMovie = async (movieId: number, rating: number) => {
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${movieId}/rating?guest_session_id=${localStorage.getItem(
       "guest_session_id"
-    )}&api_key=${import.meta.env.SOME_KEY_PROBABALY}`,
+    )}&api_key=${import.meta.env.VITE_MOVIE_API_KEY}`,
     {
       method: "POST",
       headers: {
@@ -20,7 +20,7 @@ export const rateTvShow = async (tvShowId: number, rating: number) => {
   const res = await fetch(
     `https://api.themoviedb.org/3/tv/${tvShowId}/rating?guest_session_id=${localStorage.getItem(
       "guest_session_id"
-    )}&api_key=${import.meta.env.SOME_KEY_PROBABALY}`,
+    )}&api_key=${import.meta.env.VITE_MOVIE_API_KEY}`,
     {
       method: "POST",
       headers: {

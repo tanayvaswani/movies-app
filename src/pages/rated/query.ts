@@ -3,7 +3,7 @@ export const fetchRatedMovies = async () => {
     `https://api.themoviedb.org/3/guest_session/${localStorage.getItem(
       "guest_session_id"
     )}/rated/movies?language=en-US&page=1&sort_by=created_at.asc&api_key=${
-      import.meta.env.SOME_KEY_PROBABALY
+      import.meta.env.VITE_MOVIE_API_KEY
     }`
   );
 
@@ -15,7 +15,7 @@ export const fetchRatedTvShows = async () => {
     `https://api.themoviedb.org/3/guest_session/${localStorage.getItem(
       "guest_session_id"
     )}/rated/tv?language=en-US&page=1&sort_by=created_at.asc&api_key=${
-      import.meta.env.SOME_KEY_PROBABALY
+      import.meta.env.VITE_MOVIE_API_KEY
     }`
   );
 
